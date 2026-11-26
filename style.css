@@ -1,0 +1,182 @@
+/* Global box-sizing standard */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Social Distancing: add margin-bottom to h1 and p tags */
+h1, p {
+  margin-bottom: 20px;
+}
+
+/* [Mission 1] Styling Your Business Card (.card) */
+.card {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto; /* Centers the card horizontally */
+  
+  /* Visualize Border */
+  border: 2px solid #333;
+  
+  /* Internal Breathing Space */
+  padding: 20px;
+  
+  /* Social Distancing */
+  margin-bottom: 20px; 
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.profile-photo {
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="email"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Separate your buttons by adding margin-right */
+button {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #666;
+}
+
+/* --- Week 11: Theme Toggle Button --- */
+#theme-toggle {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 0;
+  transition: background-color 0.2s;
+}
+
+#theme-toggle:hover {
+  background-color: #555555;
+}
+
+/* --- DARK MODE OVERRIDES (Triggered when button is clicked) --- */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  color: #cccccc;
+}
+
+body.dark-mode .card {
+  background-color: #181818;
+  border-color: #444444;
+  color: #ffffff;
+}
+
+body.dark-mode input[type="email"] {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+body.dark-mode input[type="email"]::placeholder {
+  color: #aaaaaa;
+}
+
+body.dark-mode #theme-toggle {
+  background-color: #f4f4f9;
+  color: #121212;
+}
+
+body.dark-mode #theme-toggle:hover {
+  background-color: #dddddd;
+}
+
+/* --- Week 12: Hobby List Formatting --- */
+#hobby-list ul {
+  text-align: left;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+#hobby-list li {
+  margin-bottom: 6px;
+}
+
+/* --- Week 13: Responsive Media Query (<= 768px) --- */
+@media (max-width: 768px) {
+  header, nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .card, #gallery-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  button {
+    min-height: 44px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
